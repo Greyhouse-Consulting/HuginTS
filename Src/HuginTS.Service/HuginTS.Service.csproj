@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Orleans.Client" Version="2.3.2" />
+    <PackageReference Include="Microsoft.Orleans.Server" Version="2.3.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HuginTS.Core\HuginTS.Core.csproj" />
+    <ProjectReference Include="..\HuginTS.Grain.Contracts\HuginTS.Grain.Contracts.csproj" />
+    <ProjectReference Include="..\HuginTS.Grains\HuginTS.Grains.csproj" />
+  </ItemGroup>
+
+</Project>

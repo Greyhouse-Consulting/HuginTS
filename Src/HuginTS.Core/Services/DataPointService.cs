@@ -37,6 +37,8 @@ namespace HuginTS.Core.Services
                 partition.Datapoints[position.X, position.Y] = value;
 
                 await partitionRepository.InsertAsync(partition);
+
+                var p = await partitionRepository.WhereAsync(pa => pa.Id == partition.Id);
             }
             else
             {

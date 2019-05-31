@@ -15,8 +15,11 @@ namespace HuginTS.Core.Domain.Entities
 
         public ObjectId Id { get; set; }
         public ObjectId TimeSeriesId { get; set; }
+        [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
         public DateTime StartOfPeriod { get; set; }
+        [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
         public DateTime Created { get; set; }
+        [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
         public DateTime Modified { get; set; }
 
         public double?[,] Datapoints { get; set; }

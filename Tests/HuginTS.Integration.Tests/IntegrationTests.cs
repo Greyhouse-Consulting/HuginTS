@@ -50,7 +50,6 @@ namespace HuginTS.Integration.Tests
             await dataPointService.RegisterAsync("series1", timeStamp2, 30);
 
             // Act
-
             var dataPoints = await dataPointService.GetByPeriodAsync("series1", new DateTime(2019, 1, 1, 0, 0, 0),
                 new DateTime(2019, 1, 20, 3, 0, 0));
 
